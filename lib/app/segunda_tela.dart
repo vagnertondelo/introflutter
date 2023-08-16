@@ -53,7 +53,9 @@ class _SegundaTelaState extends State<SegundaTela> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
 
-              Text("MInha segunda tela")
+            const Image(
+              image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+            )
           ],
         ),
       ),
