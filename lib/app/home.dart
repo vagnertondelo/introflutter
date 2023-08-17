@@ -1,4 +1,5 @@
 
+import 'package:app1/app/components/menu.dart';
 import 'package:app1/app/segunda_tela.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -32,41 +33,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child:  ListView(
-          //teste de comentario
-          //padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text('Drawer Header'),
-            ),
-
-            ListTile(
-              title: const Text('Item 1'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyHomePage(title: "navegou")),
-                );
-              },
-            ),
-
-            ListTile(
-              title: const Text('Item 2'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) =>
-                  const SegundaTela()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: 
+      Menu(context),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
